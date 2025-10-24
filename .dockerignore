@@ -1,0 +1,9 @@
+.git
+.gitignore
+**/.DS_Store
+**/node_modules
+**/tmp
+**/*.log
+**/.env*
+TM promotion strategy analysis - Claude-Dateien/
+
