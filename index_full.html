@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Brain for Brainport Eindhoven</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        /* Science Section */
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .science-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .science-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .science-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        /* Demo Section */
+        .demo-section {
+            background: white;
+        }
+
+        .demo-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .demo-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .demo-steps {
+            list-style: none;
+        }
+
+        .demo-steps li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        .demo-steps li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Brainwaves Section */
+        .brainwaves {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .wave-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .wave-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .wave-name {
+            font-size: 2em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .wave-freq {
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button-light {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button-light:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .demo-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>More Brain for Brainport Eindhoven</h1>
+            <p>Experience the science of Transcendental Meditation through live EEG demonstrations. Witness real-time brain activity changes during meditation.</p>
+            <a href="#demo" class="cta-button">See the Live Demo</a>
+        </div>
+    </div>
+
+    <!-- Science Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">The Science Behind TM</h2>
+            <p class="section-subtitle">Over 380 peer-reviewed studies demonstrate the profound effects of Transcendental Meditation on brain function, stress reduction, and overall well-being.</p>
+            
+            <div class="science-grid">
+                <div class="science-card">
+                    <h3>Enhanced Brain Coherence</h3>
+                    <p>EEG studies show increased alpha wave coherence across brain regions during TM practice, indicating improved communication between different parts of the brain.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Stress Reduction</h3>
+                    <p>Research demonstrates a 30% reduction in cortisol levels, the body's primary stress hormone, with regular TM practice.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Improved Performance</h3>
+                    <p>Studies show enhanced creativity, better decision-making, and improved cognitive function in TM practitioners.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Cardiovascular Benefits</h3>
+                    <p>Meta-analysis reveals 48% lower risk of heart attack or stroke in regular meditators compared to control groups.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Better Sleep Quality</h3>
+                    <p>EEG data shows normalization of sleep patterns and increased deep sleep phases in TM practitioners.</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>Reduced Anxiety</h3>
+                    <p>Clinical trials demonstrate significant reduction in anxiety symptoms, with effects lasting beyond meditation sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2 class="section-title">Live EEG Demonstration with Muse</h2>
+            <p class="section-subtitle">Watch real-time brain activity as a trained meditator practices Transcendental Meditation using professional EEG equipment.</p>
+            
+            <div class="demo-container">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=600&h=400&fit=crop" alt="Muse EEG Headband" class="demo-image">
+                </div>
+                
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 20px; font-size: 1.8em;">What You'll See</h3>
+                    <ul class="demo-steps">
+                        <li><strong>Baseline Measurement:</strong> Normal waking state brain activity</li>
+                        <li><strong>Transition Phase:</strong> Mind settling as meditation begins</li>
+                        <li><strong>Deep Meditation:</strong> Alpha wave dominance and brain coherence</li>
+                        <li><strong>Post-Meditation:</strong> Sustained calm and alertness</li>
+                        <li><strong>Real-time Analysis:</strong> Live interpretation of EEG patterns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brainwaves Section -->
+    <section class="brainwaves">
+        <div class="container">
+            <h2 class="section-title">Understanding Brain Waves</h2>
+            <p class="section-subtitle">Different mental states produce distinct electrical patterns in the brain. Here's what the Muse headband measures:</p>
+            
+            <div class="wave-grid">
+                <div class="wave-card">
+                    <div class="wave-name">Delta</div>
+                    <div class="wave-freq">0.5-4 Hz</div>
+                    <p>Deep sleep and healing. Rarely seen during waking meditation.</p>
+                </div>
+                
+                <div class="wave-card">
+                    <div class="wave-name">Theta</div>
+                    <div class="wave-freq">4-8 Hz</div>
+                    <p>Deep relaxation, creativity, and intuition. Present during deep TM states.</p>
+                </div>
+                
+                <div class="wave-card">
+                    <div class="wave-name">Alpha</div>
+                    <div class="wave-freq">8-13 Hz</div>
+                    <p>Relaxed awareness and calm focus. Dominant during TM practice.</p>
+                </div>
+                
+                <div class="wave-card">
+                    <div class="wave-name">Beta</div>
+                    <div class="wave-freq">13-30 Hz</div>
+                    <p>Active thinking and concentration. Decreases during meditation.</p>
+                </div>
+                
+                <div class="wave-card">
+                    <div class="wave-name">Gamma</div>
+                    <div class="wave-freq">30-100 Hz</div>
+                    <p>Peak cognitive performance. May increase in experienced meditators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video / Deep-dive Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Wat is het doel van deze demo?</h2>
+            <p class="section-subtitle">
+                Kort: laten zien dat burn-out, stress en cognitieve prestaties zichtbaar zijn in de hersenen én dat hier
+                op een wetenschappelijk onderbouwde manier iets aan te doen is.
+            </p>
+
+            <div class="video-container">
+                <h3 style="color: #667eea; margin-bottom: 15px;">Voor wie is dit relevant?</h3>
+                <ul style="line-height: 2;">
+                    <li>HR en leidinggevenden die burn-out willen voorkomen en herstel willen ondersteunen</li>
+                    <li>Organisaties die mentale veerkracht en cognitieve prestaties (IQ, focus, creativiteit) willen versterken</li>
+                    <li>Innovatie- en medische teams die hersengolftechnologie willen inzetten in zorg en preventie</li>
+                </ul>
+
+                <h3 style="color: #667eea; margin: 25px 0 15px;">Verdiepende informatie</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="documenten/infographic.html">Infographic: hersengolven en TM (uitleg in één oogopslag)</a></li>
+                    <li><a href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ (PDF)</a></li>
+                    <li><a href="documenten/tm-demo-qa-document.md" target="_blank" rel="noopener noreferrer">Q&A document bij de demo</a></li>
+                    <li><a href="documenten/links.html">Overzicht wetenschappelijke links en bronnen</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience the Benefits?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Join thousands in Brainport Eindhoven who have enhanced their cognitive performance and well-being through Transcendental Meditation.</p>
+            <a href="https://www.tm.org/centers" class="cta-button-light">Find a TM Course</a>
+            <a href="#demo" class="cta-button-light">Attend a Live Demo</a>
+        </div>
+    </section>
+
+    <!-- Files Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Relevante bestanden</h2>
+            <p class="section-subtitle">Download of bekijk de bestanden in deze map.</p>
+            <ul style="line-height: 2;">
+                <li>
+                    <a href="Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ.pdf</a>
+                    &nbsp;·&nbsp;
+                    <a href="download/Brainport EEG FAQ.pdf">download</a>
+                </li>
+                <li><a href="infographic.html">tm-brainwaves-infographic.svg (bekijken)</a></li>
+                <li><a href="tm-demo-qa-document.md" target="_blank" rel="noopener noreferrer">tm-demo-qa-document.md</a></li>
+                <li><a href="tm-presentation-script.md" target="_blank" rel="noopener noreferrer">tm-presentation-script.md</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 More Brain for Brainport Eindhoven | Transcendental Meditation</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Learn more at <a href="https://www.tm.org" style="color: #667eea;">tm.org</a></p>
+        </div>
+    </footer>
+</body>
+</html>
