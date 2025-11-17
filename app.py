@@ -39,15 +39,15 @@ def login():
             session['authenticated'] = True
             return redirect(next_url)
         else:
-            error = 'Ongeldige pincode. Probeer het opnieuw.'
+            error = 'Invalid pincode. Please try again.'
     
     login_html = '''
     <!DOCTYPE html>
-    <html lang="nl">
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Preview Toegang - Brain Innovation</title>
+        <title>Preview Access - Brain Innovation</title>
         <style>
             * { box-sizing: border-box; margin: 0; padding: 0; }
             body {
@@ -130,8 +130,8 @@ def login():
     </head>
     <body>
         <div class="login-container">
-            <h1>Preview Toegang</h1>
-            <p>Voer de pincode in om toegang te krijgen tot de preview.</p>
+            <h1>Preview Access</h1>
+            <p>Enter the pincode to access the preview.</p>
             {% if error %}
             <div class="error">{{ error }}</div>
             {% endif %}
@@ -140,7 +140,7 @@ def login():
                     <label for="pincode">Pincode</label>
                     <input type="text" id="pincode" name="pincode" autocomplete="off" autofocus required>
                 </div>
-                <button type="submit" class="btn">Toegang verkrijgen</button>
+                <button type="submit" class="btn">Get Access</button>
             </form>
         </div>
     </body>
