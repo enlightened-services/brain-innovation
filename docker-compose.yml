@@ -1,9 +1,11 @@
 services:
   web:
     build: .
-    image: brainport-eindhoven-site:latest
+    image: brain-innovation:latest
     ports:
       - "8082:8000"
     restart: unless-stopped
+    environment:
+      - PREVIEW_PINCODE=${PREVIEW_PINCODE:-456123}
 
 

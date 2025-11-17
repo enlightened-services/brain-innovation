@@ -1,0 +1,29 @@
+[90m[main 2025-11-17T09:59:15.996Z][0m updateURL https://api2.cursor.sh/updates/api/update/linux-x64/cursor/2.0.69/d7112edffc4313b2af3e9267d2cb9d72f257bd42d0f2017dcb58a5488d1173bc/stable
+[90m[main 2025-11-17T09:59:15.997Z][0m update#setState idle
+[24524:1117/105917.709538:ERROR:ui/gl/gl_surface_presentation_helper.cc:260] GetVSyncParametersIfAvailable() failed for 1 times!
+[91m[main 2025-11-17T09:59:19.273Z][0m vscode-file: Refused to load resource /tmp/.mount_Cursorj782hZ/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/tmp/.mount_Cursorj782hZ/usr/share/cursor/resources/app/extensions/theme-seti/icons/seti.woff)
+[24524:1117/105919.710174:ERROR:ui/gl/gl_surface_presentation_helper.cc:260] GetVSyncParametersIfAvailable() failed for 2 times!
+[24524:1117/105919.712561:ERROR:ui/gl/gl_surface_presentation_helper.cc:260] GetVSyncParametersIfAvailable() failed for 3 times!
+[93m[main 2025-11-17T09:59:24.199Z][0m [BrowserViewMainService] Cannot execute JavaScript: browser view not created for window 1
+[90m[main 2025-11-17T09:59:46.000Z][0m update#setState checking for updates
+[90m[main 2025-11-17T09:59:46.119Z][0m update#setState ready
+[93m[main 2025-11-17T10:00:21.141Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:02:21.173Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:03:21.142Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:05:21.142Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:06:21.143Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:08:21.144Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:09:21.144Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:18:21.158Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:19:21.159Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:21:21.160Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:22:21.157Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:23:21.159Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:24:21.240Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:27:21.159Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:28:21.161Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:29:21.161Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:30:21.162Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:32:21.164Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:33:21.163Z][0m TracingService: dropping unsupported envelope
+[93m[main 2025-11-17T10:35:21.163Z][0m TracingService: dropping unsupported envelope
