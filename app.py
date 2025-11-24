@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder=BASE_DIR, static_url_path='')
 app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 
 # Pincode voor preview toegang (kan via environment variable worden ingesteld)
-PREVIEW_PINCODE = os.environ.get('PREVIEW_PINCODE', '456123')
+PREVIEW_PINCODE = os.environ.get('PREVIEW_PINCODE', '432165')
 
 # Ensure correct MIME type for SVG files on minimal images
 mimetypes.add_type('image/svg+xml', '.svg')

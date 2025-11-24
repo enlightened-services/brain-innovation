@@ -6,6 +6,6 @@ services:
       - "8082:8000"
     restart: unless-stopped
     environment:
-      - PREVIEW_PINCODE=${PREVIEW_PINCODE:-456123}
+      - PREVIEW_PINCODE=${PREVIEW_PINCODE:-432165}
 
 
