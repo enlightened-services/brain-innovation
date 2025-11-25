@@ -198,6 +198,53 @@
             margin-bottom: 12px;
             text-align: center;
         }
+        .team-profile {
+            display: grid;
+            grid-template-columns: minmax(0, 190px) minmax(0, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+        .team-photo {
+            width: 100%;
+            border-radius: 14px;
+            object-fit: cover;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+        }
+        .team-details h3 {
+            font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+        .team-meta {
+            font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+        .team-highlights {
+            margin: 18px 0 0;
+            padding-left: 20px;
+            color: #2d3748;
+        }
+        .team-highlights li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        @media (max-width: 720px) {
+            .team-profile {
+                grid-template-columns: minmax(0, 1fr);
+                text-align: center;
+            }
+            .team-photo {
+                max-width: 220px;
+                margin: 0 auto;
+            }
+            .team-highlights {
+                text-align: left;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 340px;
+            }
+        }
         .contact-section {
             background: linear-gradient(135deg, #f7fafc 0, #edf2f7 100%);
         }
@@ -225,6 +272,27 @@
         .research-subsection h3 {
             margin-top: 0;
             color: #1e40af;
+        }
+        .research-links {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 12px;
+            margin-bottom: 0;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+        .research-links li {
+            margin-bottom: 10px;
+        }
+        .research-links a {
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+        .research-links span {
+            display: block;
+            font-size: 0.88rem;
+            color: #4a5568;
+            margin-top: 2px;
         }
         .benefits-content p,
         .org-benefits-content p {
@@ -566,9 +634,30 @@
             <section id="team" class="content-section" aria-labelledby="team-title">
                 <div class="section-container">
                     <h2 id="team-title"><span class="chapter-number">Chapter 1</span> Here is the Team</h2>
-                    <p class="section-note">Photo's, CV's – Jacques, Raymond, Geertjan.</p>
-                    <p class="section-note">PS we could include Fred Travis, and an EEG expert at Cambridge University (UK)</p>
-                    <p class="coming-soon">Team photos and CVs coming soon...</p>
+                    <p class="section-note">First available profile; additional team members follow soon.</p>
+                    <div class="team-profile card">
+                        <img class="team-photo" src="documenten/jaques_huyghe/foto_jacques_huyghe.jpg" alt="Prof. dr. ir. Jacques M. R. J. Huyghe">
+                        <div class="team-details">
+                            <h3>Prof. dr. ir. Jacques M. R. J. Huyghe</h3>
+                            <p class="team-meta">Emeritus Bernal Chair of Biomedical Engineering, Bernal Institute, University of Limerick (Ireland)</p>
+                            <p class="team-meta">Secondary appointment at Eindhoven University of Technology (The Netherlands)</p>
+                            <ul class="team-highlights">
+                                <li>300+ peer-reviewed publications</li>
+                                <li>PhD, Eindhoven University of Technology (1986)</li>
+                                <li>President, Natural Law Party (1993-1995)</li>
+                                <li>Shell donation recipient (1995)</li>
+                                <li>Fellow, Royal Netherlands Academy of Arts and Sciences (1996-2001)</li>
+                                <li>Procter &amp; Gamble InterPore Award (2013)</li>
+                                <li>KBC-prize "Het gat in de markt" (2013)</li>
+                                <li>Kimberly-Clark Distinguished Lecturer Award (2021)</li>
+                            </ul>
+                            <p class="team-meta">
+                                <a href="documenten/jaques_huyghe/cv_jacques_huyghe" target="_blank" rel="noopener noreferrer">
+                                    Download concise CV (PDF/HTML)
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -588,18 +677,87 @@
                     <div class="research-sections">
                         <div class="research-subsection">
                             <h3>(i) EEG Research</h3>
-                            <p class="section-note">EEG-onderzoeken (downloadable)</p>
+                            <ul class="research-links">
+                                <li>
+                                    <a href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">
+                                        Brain Innovation EEG FAQ
+                                    </a>
+                                    <span>Samenvatting van de meetopzet, coherentie-indicatoren en wat management kan verwachten tijdens de demo.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/Live EEG Demo Presentation Script.pdf" target="_blank" rel="noopener noreferrer">
+                                        Live EEG Demo – presentatiescript
+                                    </a>
+                                    <span>Stap-voor-stap toelichting die we gebruiken tijdens metingen op locatie.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.eurekalert.org/news-releases/1068462" target="_blank" rel="noopener noreferrer">
+                                        EurekAlert! bericht over coherente alfa-activiteit
+                                    </a>
+                                    <span>Recente berichtgeving over de relatie tussen TM, coherentie en herstel bij stress.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/links.html" target="_blank" rel="noopener noreferrer">
+                                        Compleet overzicht EEG-links
+                                    </a>
+                                    <span>Voor wie verder wil lezen: video’s, artikelen en technische achtergronden.</span>
+                                </li>
+                            </ul>
                         </div>
                         <div class="research-subsection">
                             <h3>(ii) Supporting Research</h3>
-                            <p class="section-note">Ondersteunend onderzoeken, zoals reducing burn-out, beter leervermogen, concentratie, normalisering bloeddruk, huidweerstand: betere stress bestendigheid (resilience), less fatigue. Etc. etc.</p>
+                            <ul class="research-links">
+                                <li>
+                                    <a href="documenten/EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
+                                        Uitgebreide Q&amp;A bij de demo
+                                    </a>
+                                    <span>Bevat verwijzingen naar publicaties over burn-out, cognitieve prestaties en stressherstel.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.quest.nl/mens/gezondheid/a69028753/erik-scherder-in-het-spreekuur-genen-leefstijl-brein/" target="_blank" rel="noopener noreferrer">
+                                        Erik Scherder – genen, leefstijl en brein
+                                    </a>
+                                    <span>Waarom herstelmomenten en diepe rust cruciaal zijn voor neuroplasticiteit en prestaties.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=0k6U6CwhHIQ" target="_blank" rel="noopener noreferrer">
+                                        Video: de huidige EEG-ontwikkelingen
+                                    </a>
+                                    <span>Laat zien hoe we burn-out en herstel objectief kunnen volgen.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@maharishimuse" target="_blank" rel="noopener noreferrer">
+                                        Maharishi Muse demonstraties
+                                    </a>
+                                    <span>Concrete casussen rond stressbestendigheid, focus en energie.</span>
+                                </li>
+                            </ul>
                         </div>
                         <div class="research-subsection">
                             <h3>(iii) Robert Schneider's Link</h3>
-                            <p class="section-note">Misschien ook Robert Schneider's link erin zetten?? Geeft wat breder beeld wellicht van effecten, zoals op diabetes, hoge bloeddruk/hartfalen, dementie, etc.</p>
+                            <ul class="research-links">
+                                <li>
+                                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3488563/" target="_blank" rel="noopener noreferrer">
+                                        Stress Reduction in the Secondary Prevention of Cardiovascular Disease
+                                    </a>
+                                    <span>Randomized trial o.l.v. dr. Robert Schneider over TM, bloeddruk en cardiovasculaire events.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.ahajournals.org/doi/full/10.1161/JAHA.112.000543" target="_blank" rel="noopener noreferrer">
+                                        American Heart Association – verklaring over TM bij hoge bloeddruk
+                                    </a>
+                                    <span>Beschrijft lagere incidentie van hartaanvallen, beroertes en mortaliteit bij TM.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/links.html" target="_blank" rel="noopener noreferrer">
+                                        Meer medische &amp; diabetische referenties
+                                    </a>
+                                    <span>Extra bronnen rond diabetes, cognitieve achteruitgang en neurodegeneratieve aandoeningen.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <p class="coming-soon">Research content coming soon...</p>
+                    <p class="section-note">Vragen over specifieke aandoeningen of sectoren? Laat het ons weten, dan selecteren we passende papers voor uw team.</p>
                 </div>
             </section>
 
@@ -680,225 +838,7 @@
                     <h2 id="contact-title">Contact Us</h2>
                     <div class="contact-info">
                         <p><a href="mailto:info@braininnovationtechnologies.com">info@braininnovationtechnologies.com</a></p>
-                        <p><a href="mailto:info@bit.com">info@bit.com</a></p>
                     </div>
-                </div>
-            </section>
-
-            <!-- Hero -->
-            <section class="hero" aria-labelledby="hero-title">
-                <div class="hero-left">
-                    <h1 id="hero-title">
-                        Less burnout, more clarity – visible in the brain
-                    </h1>
-                    <p class="lead">
-                        One short EEG demo shows your management and HR what stress and recovery do in the brain – and
-                        how Transcendental Meditation can contribute to less absenteeism and better performance.
-                    </p>
-
-                    <div class="hero-badges">
-                        <span class="badge">Burnout prevention & recovery</span>
-                        <span class="badge">Mental stability & resilience</span>
-                        <span class="badge">Cognitive performance (IQ, focus, creativity)</span>
-                    </div>
-
-                    <div class="hero-cta">
-                        <a class="btn btn-primary" href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">
-                            Brain Innovation EEG FAQ (PDF)
-                        </a>
-                        <a class="btn btn-secondary" href="#for-whom">
-                            Where does this fit in my organization?
-                        </a>
-                        <a class="btn btn-secondary" href="documenten/infographic.html">
-                            Brainwaves infographic
-                        </a>
-                    </div>
-
-                    <p class="hero-note">
-                        This page is a sales tool for HR, management and medical/innovation teams: from quick
-                        first impression to targeted in-depth documents in <code>documenten/</code>.
-                    </p>
-                </div>
-
-                <aside class="hero-right" aria-label="Brief summary">
-                    <h2>In 3 sentences</h2>
-                    <p>
-                        <strong>1.</strong> We show live how stress, burnout and recovery look in the brain.<br>
-                        <strong>2.</strong> We link this to concrete solutions with Transcendental Meditation.<br>
-                        <strong>3.</strong> We take the step to a conversation about implementation in your organization.
-                    </p>
-                    <p style="font-size: 0.85rem; margin-top: 4px;">
-                        For a formal proposal: use
-                        <a href="documenten/Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
-                            the proposal for a conversation about brainwave research and collaboration
-                        </a>.
-                    </p>
-                </aside>
-            </section>
-
-            <!-- Problems / pain points -->
-            <section id="problems" class="section" aria-labelledby="section-problems">
-                <h2 id="section-problems">Recognizable challenges for HR and management</h2>
-                <p class="lead">
-                    In knowledge-intensive organizations we see the same pattern recurring. This demo and accompanying
-                    materials have been developed to make exactly these problems discussable and measurable.
-                </p>
-                <div class="problem-grid">
-                    <div class="card">
-                        <h3>Burnout and absenteeism continue to rise</h3>
-                        <p>
-                            Despite wellness programs, long-term absenteeism remains high. The brain stays "on",
-                            even outside working hours. The demo literally shows how (un)recoverable that pattern is.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>Lots of talk, little objective measurement</h3>
-                        <p>
-                            HR receives many conversations, surveys and opinions, but little hard neurophysiological data.
-                            With EEG coherence and brainwaves we add an objective layer.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>Talent wants focus and growth, not tricks</h3>
-                        <p>
-                            Highly educated employees see through superficial "wellness". A demo with
-                            brainwave data and scientific backing aligns with their intelligence and pragmatism.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Demo -->
-            <section id="demo" class="section" aria-labelledby="section-demo">
-                <h2 id="section-demo">What do we show in the EEG demo?</h2>
-                <p class="lead">
-                    In 20–30 minutes your organization gets a visual experience of stress versus deep recovery in the brain,
-                    guided by expert explanations.
-                </p>
-                <div class="card">
-                    <h3>Session structure</h3>
-                    <ul class="steps">
-                        <li><strong>1. Baseline measurement:</strong> brain activity in normal, busy work mode.</li>
-                        <li><strong>2. Transition:</strong> how the brain responds as soon as the participant begins Transcendental Meditation.</li>
-                        <li><strong>3. Deep rest:</strong> increase in coherence and favorable brainwaves during TM.</li>
-                        <li><strong>4. Back to action:</strong> how the brain remains in an alert but calm state.</li>
-                        <li><strong>5. Translation to your organization:</strong> implications for burnout, functioning and learning.</li>
-                    </ul>
-                    <p style="font-size: 0.88rem; color: #4a5568; margin-top: 6px;">
-                        More details about questions and answers during the demo:
-                        <a href="documenten/tm-demo-qa-document.md" target="_blank" rel="noopener noreferrer">
-                            Q&A document for the demo
-                        </a>.
-                    </p>
-                </div>
-            </section>
-
-            <!-- For whom -->
-            <section id="for-whom" class="section" aria-labelledby="section-for-whom">
-                <h2 id="section-for-whom">For whom within your organization?</h2>
-                <p class="lead">
-                    The same data, three conversations: with HR, with management/executive team and with medical/technical teams.
-                    The documents in <code>documenten/</code> support each of these conversations.
-                </p>
-                <div class="who-grid">
-                    <div class="card">
-                        <h3>HR & wellness</h3>
-                        <p>
-                            Focus: burnout prevention, sustainable employability and recovery after absence. The EEG demo makes
-                            stress and recovery concrete, without medical claims.
-                        </p>
-                        <p style="font-size: 0.85rem; margin-top: 4px;">
-                            You can start with:
-                            <br>• <a href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ (PDF)</a>
-                            <br>• <a href="documenten/EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
-                                Extended demo Q&A
-                              </a>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>Management & executive team</h3>
-                        <p>
-                            Focus: strategic value – less absenteeism, more focus, better decision-making. We link
-                            brain measurements to risks, costs and development opportunities.
-                        </p>
-                        <p style="font-size: 0.85rem; margin-top: 4px;">
-                            For a formal conversation:
-                            <br>• <a href="documenten/Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
-                                Proposal for conversation about brainwave research and collaboration
-                              </a>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>Medical & technical teams</h3>
-                        <p>
-                            Focus: substantive depth – measurement principles, brainwaves, coherence and research literature.
-                            Here we build bridges to existing expertise in your organization.
-                        </p>
-                        <p style="font-size: 0.85rem; margin-top: 4px;">
-                            In-depth sources:
-                            <br>• <a href="documenten/infographic.html">Brainwaves & TM infographic</a>
-                            <br>• <a href="documenten/links.html">Overview links & research</a>
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Evidence -->
-            <section id="evidence" class="section" aria-labelledby="section-evidence">
-                <h2 id="section-evidence">Evidence & background</h2>
-                <p class="lead">
-                    The <code>documenten/</code> folder contains material to answer critical questions from specialists.
-                    You can choose yourself what you share with HR, management or subject matter experts.
-                </p>
-                <div class="proof-grid">
-                    <div class="card">
-                        <h3>Summary documents</h3>
-                        <p style="font-size: 0.9rem;">
-                            • <a href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ (PDF)</a><br>
-                            • <a href="documenten/EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
-                                EEG Demo Q&A – extended version
-                              </a><br>
-                            • <a href="documenten/Live EEG Demo Presentation Script.pdf" target="_blank" rel="noopener noreferrer">
-                                Live EEG Demo Presentation Script
-                              </a>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h3>Scientific articles</h3>
-                        <p style="font-size: 0.9rem;">
-                            In <code>documenten/</code> you will find publications on:
-                            <br>• higher brain integration in successful leaders (Harung)<br>
-                            <br>• effects of TM on stress and psychological well-being<br>
-                            <br>• relationship between brain function, quality and performance.<br>
-                            See also <a href="documenten/links.html">in-depth & links</a> for external sources.
-                        </p>
-                    </div>
-                </div>
-                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 10px;">
-                    Tip for sales/relationship management: choose 2–3 documents in advance that match your conversation partner's language
-                    (HR, CFO, medical specialist) and use them as follow-up after the demo.
-                </p>
-            </section>
-
-            <!-- Call to action -->
-            <section class="section" aria-labelledby="section-cta">
-                <div class="card">
-                    <h2 id="section-cta">Next step: an exploratory conversation</h2>
-                    <p class="lead">
-                        The demo itself is just the starting point. The real result emerges when HR, management and subject matter
-                        experts together explore how these insights can be embedded in policy and daily practice.
-                    </p>
-                    <p style="font-size: 0.9rem; color: #4a5568; margin-bottom: 10px;">
-                        Use the document
-                        <a href="documenten/Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
-                            "Proposal for conversation about brainwave research and collaboration"
-                        </a>
-                        as a basis for your invitation. Adapt the organization name, context and contact details.
-                    </p>
-                    <p style="font-size: 0.9rem; color: #4a5568;">
-                        <strong>Sales email suggestion:</strong> attach the Brain Innovation EEG FAQ and the infographic,
-                        and invite for a short (online) exploratory conversation with the professors.
-                    </p>
                 </div>
             </section>
         </main>

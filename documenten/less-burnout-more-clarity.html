@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less burnout, more clarity – Attachment</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #edf2ff 0, #f7fafc 45%, #edf2f7 100%);
+            color: #1a202c;
+        }
+        a { color: #2b6cb0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 24px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: #2b6cb0;
+            text-align: center;
+        }
+        .back-link {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+        main {
+            flex: 1;
+        }
+        .hero {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 32px 16px 24px;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+            gap: 32px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 18px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            margin-top: 32px;
+        }
+        .hero-left h1 {
+            font-size: clamp(2.2rem, 3.3vw, 2.9rem);
+            line-height: 1.08;
+            margin-bottom: 12px;
+            color: #1a365d;
+        }
+        .hero-left p.lead {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 16px;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .badge {
+            font-size: 0.82rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(66, 153, 225, 0.08);
+            color: #2b6cb0;
+            border: 1px solid rgba(66, 153, 225, 0.35);
+        }
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 18px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3182ce, #805ad5);
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(66, 153, 225, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 38px rgba(66, 153, 225, 0.45);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.92);
+            color: #2b6cb0;
+            border-color: rgba(66, 153, 225, 0.45);
+        }
+        .btn-secondary:hover {
+            background: #ebf8ff;
+            transform: translateY(-1px);
+        }
+        .hero-note {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        .hero-right h2 {
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+            color: #2b6cb0;
+        }
+        .hero-right p {
+            font-size: 0.88rem;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        .hero-right ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+        .hero-right li {
+            font-size: 0.88rem;
+            padding: 4px 0;
+            display: flex;
+            gap: 6px;
+        }
+        .hero-right li span.bullet {
+            font-size: 0.85rem;
+            color: #48bb78;
+            margin-top: 2px;
+        }
+        .section {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+        .section h2 {
+            font-size: 1.4rem;
+            color: #2b6cb0;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .section p.lead {
+            font-size: 0.98rem;
+            color: #4a5568;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+        .lead {
+            font-size: 0.98rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .problem-grid, .who-grid, .proof-grid {
+            display: grid;
+            gap: 12px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 14px;
+            padding: 14px 14px 12px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+        }
+        .card h3 {
+            font-size: 0.98rem;
+            color: #1a365d;
+            margin-bottom: 6px;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .steps {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 4px;
+        }
+        .steps li {
+            font-size: 0.9rem;
+            padding: 4px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 14px 12px 18px;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+        @media (min-width: 720px) {
+            .problem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .who-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .proof-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 840px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">Brain Innovation & TM – Attachments</div>
+            <a class="back-link" href="../index.html">← Terug naar homepage</a>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-left">
+                    <h1 id="hero-title">
+                        Less burnout, more clarity – visible in the brain
+                    </h1>
+                    <p class="lead">
+                        One short EEG demo shows your management and HR what stress and recovery do in the brain – and
+                        how Transcendental Meditation can contribute to less absenteeism and better performance.
+                    </p>
+
+                    <div class="hero-badges">
+                        <span class="badge">Burnout prevention & recovery</span>
+                        <span class="badge">Mental stability & resilience</span>
+                        <span class="badge">Cognitive performance (IQ, focus, creativity)</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">
+                            Brain Innovation EEG FAQ (PDF)
+                        </a>
+                        <a class="btn btn-secondary" href="#for-whom">
+                            Where does this fit in my organization?
+                        </a>
+                        <a class="btn btn-secondary" href="infographic.html">
+                            Brainwaves infographic
+                        </a>
+                    </div>
+
+                    <p class="hero-note">
+                        This page is a sales tool for HR, management and medical/innovation teams: from quick
+                        first impression to targeted in-depth documents in <code>documenten/</code>.
+                    </p>
+                </div>
+
+                <aside class="hero-right" aria-label="Brief summary">
+                    <h2>In 3 sentences</h2>
+                    <p>
+                        <strong>1.</strong> We show live how stress, burnout and recovery look in the brain.<br>
+                        <strong>2.</strong> We link this to concrete solutions with Transcendental Meditation.<br>
+                        <strong>3.</strong> We take the step to a conversation about implementation in your organization.
+                    </p>
+                    <p style="font-size: 0.85rem; margin-top: 4px;">
+                        For a formal proposal: use
+                        <a href="Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
+                            the proposal for a conversation about brainwave research and collaboration
+                        </a>.
+                    </p>
+                </aside>
+            </section>
+
+            <!-- Problems / pain points -->
+            <section id="problems" class="section" aria-labelledby="section-problems">
+                <h2 id="section-problems">Recognizable challenges for HR and management</h2>
+                <p class="lead">
+                    In knowledge-intensive organizations we see the same pattern recurring. This demo and accompanying
+                    materials have been developed to make exactly these problems discussable and measurable.
+                </p>
+                <div class="problem-grid">
+                    <div class="card">
+                        <h3>Burnout and absenteeism continue to rise</h3>
+                        <p>
+                            Despite wellness programs, long-term absenteeism remains high. The brain stays "on",
+                            even outside working hours. The demo literally shows how (un)recoverable that pattern is.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Lots of talk, little objective measurement</h3>
+                        <p>
+                            HR receives many conversations, surveys and opinions, but little hard neurophysiological data.
+                            With EEG coherence and brainwaves we add an objective layer.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Talent wants focus and growth, not tricks</h3>
+                        <p>
+                            Highly educated employees see through superficial "wellness". A demo with
+                            brainwave data and scientific backing aligns with their intelligence and pragmatism.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo -->
+            <section id="demo" class="section" aria-labelledby="section-demo">
+                <h2 id="section-demo">What do we show in the EEG demo?</h2>
+                <p class="lead">
+                    In 20–30 minutes your organization gets a visual experience of stress versus deep recovery in the brain,
+                    guided by expert explanations.
+                </p>
+                <div class="card">
+                    <h3>Session structure</h3>
+                    <ul class="steps">
+                        <li><strong>1. Baseline measurement:</strong> brain activity in normal, busy work mode.</li>
+                        <li><strong>2. Transition:</strong> how the brain responds as soon as the participant begins Transcendental Meditation.</li>
+                        <li><strong>3. Deep rest:</strong> increase in coherence and favorable brainwaves during TM.</li>
+                        <li><strong>4. Back to action:</strong> how the brain remains in an alert but calm state.</li>
+                        <li><strong>5. Translation to your organization:</strong> implications for burnout, functioning and learning.</li>
+                    </ul>
+                    <p style="font-size: 0.88rem; color: #4a5568; margin-top: 6px;">
+                        More details about questions and answers during the demo:
+                        <a href="tm-demo-qa-document.md" target="_blank" rel="noopener noreferrer">
+                            Q&A document for the demo
+                        </a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- For whom -->
+            <section id="for-whom" class="section" aria-labelledby="section-for-whom">
+                <h2 id="section-for-whom">For whom within your organization?</h2>
+                <p class="lead">
+                    The same data, three conversations: with HR, with management/executive team and with medical/technical teams.
+                    The documents in <code>documenten/</code> support each of these conversations.
+                </p>
+                <div class="who-grid">
+                    <div class="card">
+                        <h3>HR & wellness</h3>
+                        <p>
+                            Focus: burnout prevention, sustainable employability and recovery after absence. The EEG demo makes
+                            stress and recovery concrete, without medical claims.
+                        </p>
+                        <p style="font-size: 0.85rem; margin-top: 4px;">
+                            You can start with:
+                            <br>• <a href="Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ (PDF)</a>
+                            <br>• <a href="EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
+                                Extended demo Q&A
+                              </a>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Management & executive team</h3>
+                        <p>
+                            Focus: strategic value – less absenteeism, more focus, better decision-making. We link
+                            brain measurements to risks, costs and development opportunities.
+                        </p>
+                        <p style="font-size: 0.85rem; margin-top: 4px;">
+                            For a formal conversation:
+                            <br>• <a href="Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
+                                Proposal for conversation about brainwave research and collaboration
+                              </a>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Medical & technical teams</h3>
+                        <p>
+                            Focus: substantive depth – measurement principles, brainwaves, coherence and research literature.
+                            Here we build bridges to existing expertise in your organization.
+                        </p>
+                        <p style="font-size: 0.85rem; margin-top: 4px;">
+                            In-depth sources:
+                            <br>• <a href="infographic.html">Brainwaves & TM infographic</a>
+                            <br>• <a href="links.html">Overview links & research</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evidence -->
+            <section id="evidence" class="section" aria-labelledby="section-evidence">
+                <h2 id="section-evidence">Evidence & background</h2>
+                <p class="lead">
+                    The <code>documenten/</code> folder contains material to answer critical questions from specialists.
+                    You can choose yourself what you share with HR, management or subject matter experts.
+                </p>
+                <div class="proof-grid">
+                    <div class="card">
+                        <h3>Summary documents</h3>
+                        <p style="font-size: 0.9rem;">
+                            • <a href="Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">Brain Innovation EEG FAQ (PDF)</a><br>
+                            • <a href="EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
+                                EEG Demo Q&A – extended version
+                              </a><br>
+                            • <a href="Live EEG Demo Presentation Script.pdf" target="_blank" rel="noopener noreferrer">
+                                Live EEG Demo Presentation Script
+                              </a>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Scientific articles</h3>
+                        <p style="font-size: 0.9rem;">
+                            In this folder you will find publications on:
+                            <br>• higher brain integration in successful leaders (Harung)<br>
+                            <br>• effects of TM on stress and psychological well-being<br>
+                            <br>• relationship between brain function, quality and performance.<br>
+                            See also <a href="links.html">in-depth & links</a> for external sources.
+                        </p>
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 10px;">
+                    Tip for sales/relationship management: choose 2–3 documents in advance that match your conversation partner's language
+                    (HR, CFO, medical specialist) and use them as follow-up after the demo.
+                </p>
+            </section>
+
+            <!-- Call to action -->
+            <section class="section" aria-labelledby="section-cta">
+                <div class="card">
+                    <h2 id="section-cta">Next step: an exploratory conversation</h2>
+                    <p class="lead">
+                        The demo itself is just the starting point. The real result emerges when HR, management and subject matter
+                        experts together explore how these insights can be embedded in policy and daily practice.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #4a5568; margin-bottom: 10px;">
+                        Use the document
+                        <a href="Voorstel Philips.docx" target="_blank" rel="noopener noreferrer">
+                            "Proposal for conversation about brainwave research and collaboration"
+                        </a>
+                        as a basis for your invitation. Adapt the organization name, context and contact details.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #4a5568;">
+                        <strong>Sales email suggestion:</strong> attach the Brain Innovation EEG FAQ and the infographic,
+                        and invite for a short (online) exploratory conversation with the professors.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Attachment – © 2025 Brain Innovation & TM.
+        </footer>
+    </div>
+</body>
+</html>
+
