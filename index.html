@@ -179,6 +179,17 @@
             border-radius: 8px;
             border: 1px dashed #cbd5e0;
         }
+        .coming-later {
+            color: #718096;
+            font-style: italic;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 4px;
+            padding: 8px;
+            background: rgba(237, 242, 247, 0.5);
+            border-radius: 4px;
+            border-left: 3px solid #f59e0b;
+        }
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -274,6 +285,69 @@
             color: #1e40af;
         }
         .research-links {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 2px solid rgba(30, 64, 175, 0.2);
+        }
+        .research-links h3 {
+            font-size: clamp(1.3rem, 2vw, 1.6rem);
+            color: #1e40af;
+            margin-bottom: 12px;
+        }
+        .research-links h4 {
+            font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+            color: #1a365d;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        .links-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        .links-list li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        .links-list a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        .links-list a:hover {
+            text-decoration: underline;
+        }
+        .prominent-link-card {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+        .prominent-link-card h4 {
+            color: #fff;
+            font-size: clamp(1.2rem, 2vw, 1.4rem);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .prominent-link {
+            display: inline-block;
+            background: #fff;
+            color: #2563eb;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .prominent-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+        .research-links {
             list-style: disc;
             padding-left: 20px;
             margin-top: 12px;
@@ -328,6 +402,25 @@
         }
         .contact-info a:hover {
             text-decoration: underline;
+        }
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .team-member-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            text-align: center;
+        }
+        .team-member-card h3 {
+            font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+            color: #2b6cb0;
+            margin-bottom: 12px;
         }
         .hero {
             max-width: 1040px;
@@ -634,8 +727,7 @@
             <section id="team" class="content-section" aria-labelledby="team-title">
                 <div class="section-container">
                     <h2 id="team-title"><span class="chapter-number">Chapter 1</span> Here is the Team</h2>
-                    <p class="section-note">First available profile; additional team members follow soon.</p>
-                    <div class="team-profile card">
+                    <div class="team-profile card" style="margin-top: 0;">
                         <img class="team-photo" src="documenten/jaques_huyghe/foto_jacques_huyghe.jpg" alt="Prof. dr. ir. Jacques M. R. J. Huyghe">
                         <div class="team-details">
                             <h3>Prof. dr. ir. Jacques M. R. J. Huyghe</h3>
@@ -651,11 +743,63 @@
                                 <li>KBC-prize "Het gat in de markt" (2013)</li>
                                 <li>Kimberly-Clark Distinguished Lecturer Award (2021)</li>
                             </ul>
-                            <p class="team-meta">
-                                <a href="documenten/jaques_huyghe/cv_jacques_huyghe" target="_blank" rel="noopener noreferrer">
-                                    Download concise CV (PDF/HTML)
-                                </a>
-                            </p>
+                        </div>
+                    </div>
+
+                    <div class="team-profile card" style="margin-top: 24px;">
+                        <img class="team-photo" src="documenten/geertjan/foto_geertjan_tangelder.jpg" alt="Prof. Geert Jan Tangelder" onerror="this.style.display='none'">
+                        <div class="team-details">
+                            <h3>Prof. Geert Jan Tangelder</h3>
+                            <p class="team-meta">Member of the Brain Innovation research team</p>
+                            <ul class="team-highlights">
+                                <li>Expert in brain performance research and EEG measurements</li>
+                                <li>Specialized in neurophysiological insights for organizational applications</li>
+                                <li>Collaborates with organizations on vitality and performance improvement</li>
+                                <li>Available for exploratory conversations about brainwave research and Transcendental Meditation for organizations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-profile card" style="margin-top: 24px;">
+                        <img class="team-photo" src="documenten/raymon_slot/https___www.hu.nl_-_media_hu_afbeeldingen_personen_raymond-slot.avif" alt="Dr. Ir. Raymond Slot MBA" onerror="this.style.display='none'">
+                        <div class="team-details">
+                            <h3>Dr. Ir. Raymond Slot MBA</h3>
+                            <p class="team-meta">Lector Cybersecurity at Utrecht University of Applied Sciences (since September 2022)</p>
+                            <p class="team-meta">Managing partner at Strategy Alliance, a management consulting firm</p>
+                            <ul class="team-highlights">
+                                <li>PhD, University of Amsterdam (2010)</li>
+                                <li>Lecturer in Architecture of Digital Information Systems at Utrecht University of Applied Sciences (2010-2018)</li>
+                                <li>The research group focuses on research into increasing the digital resilience of government organizations and companies</li>
+                                <li>National and international experience in guiding organizations in digital transitions</li>
+                                <li>Expertise in cybersecurity, data management and enterprise architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-profile card" style="margin-top: 24px;">
+                        <img class="team-photo" src="documenten/fred_travis/foto_fred_travis.jpg" alt="Dr. Frederick Travis" onerror="this.style.display='none'">
+                        <div class="team-details">
+                            <h3>Dr. Frederick Travis</h3>
+                            <p class="team-meta">Professor of Maharishi Vedic Science, Director of the Center for Brain, Consciousness, and Cognition, Maharishi International University</p>
+                            <ul class="team-highlights">
+                                <li>Leading researcher on brain functioning and Transcendental Meditation</li>
+                                <li>Extensive publications on EEG coherence, brain integration, and cognitive development</li>
+                                <li>Research published in peer-reviewed journals including Brain and Cognition, Cognitive Processing, International Journal of Neuroscience, and Consciousness and Cognition</li>
+                                <li>Key findings on alpha coherence patterns during TM practice</li>
+                                <li>Studies on effects of TM on creativity, innovation, and brain integration</li>
+                                <li>Research on TM for ADHD, PTSD, and stress reduction in various populations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="team-profile card" style="margin-top: 24px;">
+                        <img class="team-photo" src="documenten/placeholder.jpg" alt="EEG Expert at Cambridge University (UK)" onerror="this.style.display='none'">
+                        <div class="team-details">
+                            <h3>EEG Expert at Cambridge University (UK)</h3>
+                            <p class="team-meta">Information coming soon...</p>
+                            <ul class="team-highlights">
+                                <li>Information coming soon...</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -665,8 +809,79 @@
             <section id="method" class="content-section" aria-labelledby="method-title">
                 <div class="section-container">
                     <h2 id="method-title"><span class="chapter-number">Chapter 2</span> The Method</h2>
-                    <p class="section-note">Describe TM (and TM Siddhi's ??)</p>
-                    <p class="coming-soon">Content coming soon...</p>
+                    <div class="benefits-content">
+                        <h3>What is Transcendental Meditation?</h3>
+                        <p>
+                            Transcendental Meditation (TM) is a simple, natural, and effortless mental technique practiced 
+                            20 minutes twice daily while sitting comfortably with the eyes closed. It is not a religion, 
+                            philosophy, or lifestyle change. TM is a scientifically validated procedure to reduce stress 
+                            and optimize brain functioning.
+                        </p>
+                        
+                        <h3>How It Works</h3>
+                        <p>
+                            During TM practice, the mind naturally settles to a state of restful alertness—deeper than 
+                            ordinary relaxation but fully alert. This unique state produces measurable changes in brain 
+                            functioning that can be observed through EEG (electroencephalography) measurements. Research 
+                            shows increased alpha coherence across brain regions, indicating better integration and 
+                            communication between different parts of the brain.
+                        </p>
+                        
+                        <h3>Key Characteristics for Organizations</h3>
+                        <ul class="team-highlights">
+                            <li><strong>Effortless:</strong> No concentration, contemplation, or control required. The technique works automatically.</li>
+                            <li><strong>Time-efficient:</strong> 20 minutes twice daily—can be practiced at home or in a quiet space at the office.</li>
+                            <li><strong>No lifestyle changes:</strong> No dietary requirements, philosophical commitments, or belief systems needed.</li>
+                            <li><strong>Evidence-based:</strong> Over 380 peer-reviewed scientific studies demonstrate measurable benefits.</li>
+                            <li><strong>Immediate and cumulative:</strong> Benefits appear from the first session and increase with regular practice.</li>
+                        </ul>
+                        
+                        <h3>What Makes TM Different from Other Meditation Techniques?</h3>
+                        <p>
+                            Unlike mindfulness meditation or concentration techniques that require active attention or monitoring 
+                            of thoughts, TM is completely effortless. The mind naturally transcends thinking to experience a 
+                            unique state of restful alertness. EEG research clearly distinguishes TM from other meditation 
+                            practices, showing distinctive alpha coherence patterns not seen in mindfulness or concentration meditation.
+                        </p>
+                        
+                        <h3>Practical Implementation in Organizations</h3>
+                        <p>
+                            TM can be learned by employees through a standardized course taught by certified instructors. 
+                            The technique requires:
+                        </p>
+                        <ul class="team-highlights">
+                            <li>Initial instruction: Personal one-on-one session with a certified TM teacher</li>
+                            <li>Follow-up sessions: Three group sessions over consecutive days to refine the technique</li>
+                            <li>Regular practice: 20 minutes twice daily—typically morning and afternoon/evening</li>
+                            <li>Ongoing support: Optional follow-up sessions available to ensure correct practice</li>
+                        </ul>
+                        
+                        <p>
+                            Once learned, TM is practiced independently by each employee. No group sessions or ongoing 
+                            instruction are required, making it highly scalable and practical for organizations of any size.
+                        </p>
+                        
+                        <h3>Relevance for Knowledge-Intensive Organizations</h3>
+                        <p>
+                            In today's fast-paced, innovation-driven business environment, cognitive performance is a 
+                            critical competitive advantage. TM addresses the root cause of decreased performance—accumulated 
+                            stress—by providing deep physiological rest that allows the nervous system to release stress 
+                            and restore optimal functioning. This results in:
+                        </p>
+                        <ul class="team-highlights">
+                            <li>Enhanced creativity and innovative thinking</li>
+                            <li>Improved decision-making under pressure</li>
+                            <li>Better focus and concentration</li>
+                            <li>Increased resilience to stress and challenges</li>
+                            <li>Better work-life balance and overall well-being</li>
+                        </ul>
+                        
+                        <p>
+                            Major organizations worldwide—including technology companies, financial institutions, and 
+                            healthcare systems—have successfully implemented TM programs for their employees, with measurable 
+                            improvements in productivity, job satisfaction, and reduced healthcare costs.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -674,33 +889,48 @@
             <section id="eeg-research" class="content-section" aria-labelledby="eeg-title">
                 <div class="section-container">
                     <h2 id="eeg-title"><span class="chapter-number">Chapter 3</span> The Research the Team Studied with Care</h2>
+                    <p style="font-size: 1.05rem; color: #4a5568; margin-bottom: 24px; line-height: 1.7;">
+                        Hieronder vindt u een overzicht van de belangrijkste onderzoeksgebieden en wetenschappelijke referenties 
+                        waarop ons werk gebaseerd is. De referenties zijn georganiseerd per thema: EEG-onderzoek, ondersteunend 
+                        onderzoek, cardiovasculaire gezondheid, zakelijk onderzoek en hersenfunctie. Waar beschikbaar zijn directe 
+                        links naar documenten en artikelen opgenomen.
+                    </p>
                     <div class="research-sections">
                         <div class="research-subsection">
                             <h3>(i) EEG Research</h3>
                             <ul class="research-links">
                                 <li>
-                                    <a href="documenten/Brainport EEG FAQ.pdf" target="_blank" rel="noopener noreferrer">
-                                        Brain Innovation EEG FAQ
-                                    </a>
+                                    <strong>⏳ <em>Brain Innovation EEG FAQ</em></strong><br>
+                                    <span style="color: #718096; font-style: italic;">📝 Document in ontwikkeling – komt binnenkort beschikbaar</span><br>
                                     <span>Samenvatting van de meetopzet, coherentie-indicatoren en wat management kan verwachten tijdens de demo.</span>
                                 </li>
                                 <li>
-                                    <a href="documenten/Live EEG Demo Presentation Script.pdf" target="_blank" rel="noopener noreferrer">
-                                        Live EEG Demo – presentatiescript
-                                    </a>
+                                    <strong>⏳ <em>Live EEG Demo – presentatiescript</em></strong><br>
+                                    <span style="color: #718096; font-style: italic;">📝 Document in ontwikkeling – komt binnenkort beschikbaar</span><br>
                                     <span>Stap-voor-stap toelichting die we gebruiken tijdens metingen op locatie.</span>
                                 </li>
                                 <li>
                                     <a href="https://www.eurekalert.org/news-releases/1068462" target="_blank" rel="noopener noreferrer">
-                                        EurekAlert! bericht over coherente alfa-activiteit
+                                        ✅ EurekAlert! bericht over coherente alfa-activiteit
                                     </a>
                                     <span>Recente berichtgeving over de relatie tussen TM, coherentie en herstel bij stress.</span>
                                 </li>
                                 <li>
                                     <a href="documenten/links.html" target="_blank" rel="noopener noreferrer">
-                                        Compleet overzicht EEG-links
+                                        ✅ Compleet overzicht EEG-links
                                     </a>
-                                    <span>Voor wie verder wil lezen: video’s, artikelen en technische achtergronden.</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=0k6U6CwhHIQ" target="_blank" rel="noopener noreferrer">
+                                        ✅ EEG report demo van Bernard Marcus
+                                    </a>
+                                    <span>Laat zien hoe we burn-out en herstel objectief kunnen volgen.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/TM Coh CS&LS IntjNS06 Travis Arenander.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ Cross-Sectional and Longitudinal Study of Effects of TM on Frontal Power Asymmetry and Coherence
+                                    </a>
+                                    <span>Travis & Arenander (2006) – International Journal of Neuroscience onderzoek naar EEG coherentie en frontale power asymmetrie.</span>
                                 </li>
                             </ul>
                         </div>
@@ -708,34 +938,35 @@
                             <h3>(ii) Supporting Research</h3>
                             <ul class="research-links">
                                 <li>
-                                    <a href="documenten/EEG Demo Q&A - Frequently Asked Questions (combined).pdf" target="_blank" rel="noopener noreferrer">
-                                        Uitgebreide Q&amp;A bij de demo
-                                    </a>
+                                    <strong>⏳ <em>Uitgebreide Q&amp;A bij de demo</em></strong><br>
+                                    <span style="color: #718096; font-style: italic;">📝 Document in ontwikkeling – komt binnenkort beschikbaar</span><br>
                                     <span>Bevat verwijzingen naar publicaties over burn-out, cognitieve prestaties en stressherstel.</span>
                                 </li>
                                 <li>
                                     <a href="https://www.quest.nl/mens/gezondheid/a69028753/erik-scherder-in-het-spreekuur-genen-leefstijl-brein/" target="_blank" rel="noopener noreferrer">
-                                        Erik Scherder – genen, leefstijl en brein
+                                        ✅ Erik Scherder – genen, leefstijl en brein
                                     </a>
                                     <span>Waarom herstelmomenten en diepe rust cruciaal zijn voor neuroplasticiteit en prestaties.</span>
                                 </li>
                                 <li>
-                                    <a href="https://www.youtube.com/watch?v=0k6U6CwhHIQ" target="_blank" rel="noopener noreferrer">
-                                        Video: de huidige EEG-ontwikkelingen
-                                    </a>
-                                    <span>Laat zien hoe we burn-out en herstel objectief kunnen volgen.</span>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/@maharishimuse" target="_blank" rel="noopener noreferrer">
-                                        Maharishi Muse demonstraties
-                                    </a>
+                                    <strong>⏳ <em>Maharishi Muse demonstraties</em></strong><br>
+                                    <span style="color: #718096; font-style: italic;">📝 Link in ontwikkeling – komt binnenkort beschikbaar</span><br>
                                     <span>Concrete casussen rond stressbestendigheid, focus en energie.</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="research-subsection">
-                            <h3>(iii) Robert Schneider's Link</h3>
+                            <h3>(iii) Cardiovascular Health Research</h3>
+                            <p style="font-size: 0.9rem; color: #4a5568; margin-bottom: 12px;">
+                                Onderzoek naar de effecten van TM op hart- en vaatziekten, bloeddruk en cardiovasculaire gezondheid (o.l.v. dr. Robert Schneider).
+                            </p>
                             <ul class="research-links">
+                                <li>
+                                    <a href="documenten/Nature_Reviews_Cardiology_2025_TM_s41569-025-01235-x.pdf" target="_blank" rel="noopener noreferrer">
+                                        Transcendental Meditation to combat psychosocial stress, hypertension and cardiovascular disease
+                                    </a>
+                                    <span>Nature Reviews Cardiology (2025) – Recente review o.l.v. dr. Robert H. Schneider over TM bij psychosociale stress, hypertensie en cardiovasculaire aandoeningen.</span>
+                                </li>
                                 <li>
                                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3488563/" target="_blank" rel="noopener noreferrer">
                                         Stress Reduction in the Secondary Prevention of Cardiovascular Disease
@@ -749,15 +980,206 @@
                                     <span>Beschrijft lagere incidentie van hartaanvallen, beroertes en mortaliteit bij TM.</span>
                                 </li>
                                 <li>
-                                    <a href="documenten/links.html" target="_blank" rel="noopener noreferrer">
-                                        Meer medische &amp; diabetische referenties
+                                    <a href="https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.111.062786" target="_blank" rel="noopener noreferrer">
+                                        Circulation – Stress Reduction in the Primary Prevention of Cardiovascular Disease
                                     </a>
-                                    <span>Extra bronnen rond diabetes, cognitieve achteruitgang en neurodegeneratieve aandoeningen.</span>
+                                    <span>Randomized controlled trial o.l.v. dr. Robert Schneider over effecten van TM op hartaanvallen, beroertes en mortaliteit in primaire preventie.</span>
+                                </li>
+                                <li>
+                                    <strong>Diabetes en metabole gezondheid:</strong> Chronische stress is een belangrijke factor bij diabetes type 2. Stressreductie door TM kan helpen bij bloedsuikerregulatie en vermindering van cardiovasculaire risicofactoren. Zie het Nature Reviews Cardiology artikel hierboven voor referenties naar gerelateerd onderzoek.
+                                </li>
+                                <li>
+                                    <strong>Barnes VA, Treiber FA, Johnson MH.</strong> Impact of stress reduction on ambulatory blood pressure in African American adolescents. <em>American Journal of Hypertension</em> 2004 17(4):366-369. One hundred African American teenagers with blood pressure at the high end of normal were randomly assigned to two groups: One group learned TM and meditated twice a day for four months, whereas the other (control group) received health education lectures for a similar amount of time. At the end of the study, the TM group showed a significant drop in blood pressure compared with the control group, an effect that still held four months after the study ended.
+                                </li>
+                                <li>
+                                    <strong>Cognitieve achteruitgang en neurodegeneratie:</strong> Chronische stress en verhoogde bloeddruk zijn risicofactoren voor cognitieve achteruitgang. Door stressreductie en verbetering van cardiovasculaire gezondheid kan TM bijdragen aan hersenbescherming. Voor uitgebreide referenties, zie de Nature Reviews Cardiology review voor recent overzicht van onderzoek.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="research-subsection">
+                            <h3>(iv) Workplace & Organizational Research</h3>
+                            <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 16px;">
+                                Onderzoek naar TM in zakelijke context, werknemerswelzijn en organisatieprestaties.
+                            </p>
+                            <ul class="research-links">
+                                <li>
+                                    <strong>Haratani T, Hemmi T.</strong> Effects of Transcendental Meditation on health behavior of industrial workers. <em>Japanese Journal of Public Health</em> 1990 37:729. Industrial workers who learned the Transcendental Meditation program, in contrast to control employees, showed improved sleep quality, and decreased cigarette consumption.
+                                </li>
+                                <li>
+                                    <strong>Haratani T, Hemmi T.</strong> Effects of Transcendental Meditation on mental health of industrial workers. <em>Japanese Journal of Industrial Health</em> 1990 32:656. A five month study conducted by researchers at Japan's National Institute of Industrial Health. Industrial employees practicing the TM technique showed increased emotional stability, reduced anxiety, decreased tendency to neurosis and reduced insomnia and smoking compared to controls. Improvement in General Physical and Mental Well-Being in Industrial Workers: Decreased Physical Complaints; Decreased Impulsive Tendency; Reduced Emotional Instability.
+                                </li>
+                                <li>
+                                    <strong>Barnes VA, Bauza LB, Treiber FA.</strong> Impact of stress reduction on negative school behavior in adolescents. <em>Health and Quality of Life Outcomes</em> 2003 1(1):10. This random assigned study found that adolescent students who learned the Transcendental Meditation technique, and participated in daily group practice, showed decreased absenteeism, reduced school rule infractions, and fewer suspension days due to behaviour problems, in contrast to control students who participated in a health education course for an equivalent amount of time each day.
+                                </li>
+                                <li>
+                                    <strong>Orme-Johnson DW.</strong> An overview of Charles Alexander's contribution to psychology: developing higher states of consciousness in the individual and the society. <em>Journal of Adult Development</em> 2000 7(4):199-215. This paper reviews over 80 publications of Charles N. ("Skip") Alexander. Skip theoretically showed that the four higher states of consciousness described by Maharishi's Vedic psychology logically extend the developmental sequence delineated by 20th century psychology. His empirical research found that the Transcendental Meditation® technique provides the direct experience of transcendental consciousness and that this practice accelerates development in children, "unfreezes" development in prison inmates, advances ego development in adults, increases productivity in businesses, decreases blood pressure, increases longevity, effectively treats substance abuse, and reduces prison recidivism.
+                                </li>
+                                <li>
+                                    <strong>Schmidt-Wilk J, Alexander CN, Swanson GC.</strong> Developing consciousness in organizations: the Transcendental Meditation program in business. <em>Journal of Business and Psychology</em> 1996 10(4):429-444. A review of research and case studies on the application of Maharishi's Transcendental Meditation Program in the workplace indicates improved employee health, increased job satisfaction, improved job performance and productivity, and improved organizational performance and climate. Drawing on a case study of a Swedish top management team whose members were practitioners of the TM technique, this article argues for developmental maturity as an important causal factor for effective TQM (Total Quality Management) behaviors and success.
+                                </li>
+                                <li>
+                                    <a href="documenten/EmployeeSupportAndTMnov2025.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ Employee Support and TM (November 2025)
+                                    </a>
+                                    <span>Document over werknemersondersteuning en Transcendental Meditation in organisaties.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/Corporate Leadership Through the TM Prog.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ Corporate Leadership Through the TM Program
+                                    </a>
+                                    <span>Onderzoek en case studies over TM in zakelijke context en leiderschapsontwikkeling.</span>
+                                </li>
+                                <li>
+                                    <strong>Travis F.</strong> Innovation, creativity and brain integration. In MR Gurubatham, GA Williams (eds). <em>Workplace Innovations: Advancing Innovation and Sustainable Outcomes in International Graduate Education</em> (pp.160-176). Hershey, Pennsylvania: IGI Global, 2021. doi:10.4018/978-1-7998-5514-9.ch010
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="research-subsection">
+                            <h3>(v) Brain Functioning Research</h3>
+                            <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 16px;">
+                                EEG, fMRI en neurofysiologisch onderzoek naar hersenfunctie tijdens en na TM beoefening.
+                            </p>
+                            <ul class="research-links">
+                                <li>
+                                    <a href="documenten/TM Rev NYAcad13 Travis.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ TM Research Review – Travis (2013)
+                                    </a>
+                                    <span>Review artikel over Transcendental Meditation onderzoek en bevindingen.</span>
+                                </li>
+                                <li>
+                                    <strong>Orme-Johnson DW.</strong> Transcendental Meditation in the treatment of mental and physical conditions. In M Farias, D Brazier, M Lalljee (eds), <em>The Oxford Handbook of Meditation</em>. Oxford University Press, 2021. doi.org/10.1093/oxfordhb/9780198808640.013.35
+                                </li>
+                                <li>
+                                    <strong>Avvenuti G, et al.</strong> Reductions in perceived stress following Transcendental Meditation practice are associated with increased brain regional connectivity at rest. <em>Brain and Cognition</em>, 2020;139:105517. <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">[PubMed]</a>
+                                </li>
+                                <li>
+                                    <strong>Malone M, et al.</strong> fMRI during Transcendental Meditation practice. <em>Brain and Cognition</em>, 2018;123:30-33. <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">[PubMed]</a>
+                                </li>
+                                <li>
+                                    <a href="documenten/TM college BIS sleep coh GSR IntJPP09 Travis.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ Effects of TM Practice on Brain Integration, Sleep, Coherence and GSR
+                                    </a>
+                                    <span>Travis et al. (2009) – International Journal of Psychophysiology onderzoek naar hersengolfcoherentie, slaap en stressreactiviteit bij studenten.</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/TM Cat of Meditations CC12 Travis.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ Categories of Meditation – Comparison Study
+                                    </a>
+                                    <span>Travis & Shear (2010) – Consciousness and Cognition onderzoek naar verschillen tussen meditatietypen (Vedic, Buddhist, Chinese tradities).</span>
+                                </li>
+                                <li>
+                                    <a href="documenten/TM ADHD MindBrain11 Travis.pdf" target="_blank" rel="noopener noreferrer">
+                                        ✅ ADHD, Brain Functioning, and Transcendental Meditation Practice
+                                    </a>
+                                    <span>Travis, Grosswald & Stixrud (2011) – Mind & Brain onderzoek naar TM bij ADHD door stressreductie.</span>
+                                </li>
+                                <li>
+                                    <strong>Kang SS, Erbes CR, Lamberty GJ, Thuras P, Sponheim SR, Polusny MA, Moran AC, Van Voorhis AC, Lim KO.</strong> Transcendental Meditation for veterans with post-traumatic stress disorder. <em>Psychological Trauma: Theory, Research, Practice, and Policy</em> 2018 10(6):675-680. doi.org/10.1037/tra0000346
+                                </li>
+                                <li>
+                                    <strong>Travis F, Valosek L, Konrad IV A, Link J, Salerno J, Scheller R, Nidich S.</strong> Effect of meditation on psychological distress and brain functioning: a randomized controlled study. <em>Brain and Cognition</em> 2018 125:100-105. doi.org/10.1016/j.bandc.2018.03.011
+                                </li>
+                                <li>
+                                    <strong>O'Connell DF, Bevvino DL (eds).</strong> <em>Prescribing Health: Transcendental Meditation in Contemporary Medical Care</em>. Lanham, Maryland: Rowman &amp; Littlefield, 2014
+                                </li>
+                                <li>
+                                    <strong>Barnes VA, Rigg JL, Williams JJ.</strong> Clinical case series: treatment of PTSD with Transcendental Meditation in active duty military personnel. <em>Military Medicine</em> 2013 178(7):e836-40. doi:10.7205/MILMED-D-12-00426
+                                </li>
+                                <li>
+                                    <strong>Travis FT, Haaga DH, Hagelin JS, Tanner M, Arenander A, Nidich S, Gaylord-King C, Grosswald S, Rainforth M, Schneider RH.</strong> A self-referential default brain state: patterns of coherence, power, and eLORETA sources during eyes-closed rest and the Transcendental Meditation practice. <em>Cognitive Processing</em> 2010 11(1):21-30
+                                </li>
+                                <li>
+                                    <strong>Travis, F., Haaga, D. A., Hagelin, J., Tanner, M., Arenander, A., Nidich, S., et al.</strong> A self-referential default brain state: patterns of coherence, power, and eLORETA sources during eyes-closed rest and Transcendental Meditation practice. <em>Cognitive Processing</em>, 11(1), 21-30, 2009.
+                                </li>
+                                <li>
+                                    <strong>Travis, F. and S. Brown.</strong> My Brain Made Me Do It: Brain Maturation and Levels of Self-Development, in <em>The Postconventional Personality: Perspectives on Higher Development</em>, A.H. Pfaffenberger, P.W. Marko, and T. Greening, Editors, Sage Publishing: New York, 2009.
+                                </li>
+                                <li>
+                                    <strong>Grosswald SJ, Stixrud WR, Travis F, Bateh MA.</strong> Use of the Transcendental Meditation technique to reduce symptoms of Attention Deficit Hyperactivity Disorder (ADHD) by reducing stress and anxiety: an exploratory study. <em>Current Issues in Education</em> [On-line] 2008 10(2).
+                                </li>
+                                <li>
+                                    <strong>Orme-Johnson D, Schneider R, Son YD, Nidich S, Cho ZH.</strong> Neuroimaging of meditation's effect on brain reactivity to pain. <em>NeuroReport</em>, 2006;17:1359-1363.
+                                </li>
+                                <li>
+                                    <strong>Travis, F.T.</strong> Are All Meditations the Same? Comparison of Brain Patterns, Benefits, and Descriptions of Mindfulness Meditation, Tibetan Buddhist Meditation and Transcendental Meditation. <em>Towards a Science of Consciousness: Abstracts</em>, 263, p. 181, 2006
+                                </li>
+                                <li>
+                                    <strong>Travis, F.T. and Arenander, A.</strong> Cross-Sectional and Longitudinal Study of Effects of Transcendental Meditation Practice on Frontal Power Asymmetry and Frontal Coherence, <em>International Journal of Neuroscience</em>, 116(11): 1519-1538, 2006.
+                                </li>
+                                <li>
+                                    <strong>Hebert, R., Lehman, D., Tan, G., Travis, F., and Arenandar, A.</strong> Enhanced EEG alpha time-domain phase synchrony during Transcendental Meditation: Implications for cortical implication theory. <em>Signal Processing</em>, 85(11), 2213-2232, 2005.
+                                </li>
+                                <li>
+                                    <strong>Travis, F.T., Arenander, A., DuBois, D.</strong> Psychological and physiological characteristics of a proposed object-referral / self-referral continuum of self-awareness. <em>Consciousness and Cognition</em>, 13/2, 401-420, 2004.
+                                </li>
+                                <li>
+                                    <strong>Travis, F.</strong> Patterns of EEG coherence, power, and contingent negative variation characterize the integration of transcendental and waking states. <em>Biological Psychology</em> 61: 293–319, 2002.
+                                </li>
+                                <li>
+                                    <strong>Lyubimov NN.</strong> Changes in electroencephalogram and evoked potentials during application of a special form of psychological training (meditation). <em>Human Physiology (Fiziologiya Cheloveka)</em> 1999 25:171-180
+                                </li>
+                                <li>
+                                    <strong>Jevning R, Anand R, Beidebach M, Fernando G.</strong> Effects on regional cerebral blood flow of Transcendental Meditation. <em>Physiology and Behavior</em> 1996 59(3):399-402
+                                </li>
+                                <li>
+                                    <strong>Orme-Johnson DW, Gelderloos P.</strong> Topographic brain mapping during Yogic Flying. <em>International Journal of Neuroscience</em> 1988 38(3/4):427-434
+                                </li>
+                                <li>
+                                    <strong>Gallois, P.</strong> Modifications neurophysiologiques et respiratoires lors de la pratique des techniques de relaxation. <em>L'Encéphale</em> 10: 139–144, 1984.
+                                </li>
+                                <li>
+                                    <strong>Wallace, R.K. et al.</strong> Modification of the paired H reflex through the Transcendental Meditation and TM-Sidhi program. <em>Experimental Neurology</em> 79: 77–86, 1983.
+                                </li>
+                                <li>
+                                    <strong>Nidich, S.I. et al.</strong> Kohlbergian cosmic perspective responses, EEG coherence, and the Transcendental Meditation and TM-Sidhi program. <em>Journal of Moral Education</em> 12: 166–173, 1983.
+                                </li>
+                                <li>
+                                    <strong>Orme-Johnson, D.W. and Haynes, C.T.</strong> EEG phase coherence, pure consciousness, creativity, and TM-Sidhi experiences. <em>International Journal of Neuroscience</em> 13: 211–217, 1981.
+                                </li>
+                                <li>
+                                    <strong>Warshal, D.</strong> Effects of the Transcendental Meditation technique on normal and Jendrassik reflex time. <em>Perceptual and Motor Skills</em> 50: 1103–1106, 1980.
+                                </li>
+                                <li>
+                                    <strong>McEvoy, T.M. et al.</strong> Effects of meditation on brainstem auditory evoked potentials. <em>International Journal of Neuroscience</em> 10: 165–170, 1980.
+                                </li>
+                                <li>
+                                    <strong>Banquet, J.P. and Lesevre, N.</strong> Event-related potentials in altered states of consciousness: Motivation, motor and sensory processes of the brain. <em>Progress in Brain Research</em> 54: 447–453, 1980.
+                                </li>
+                                <li>
+                                    <strong>Jevning R, Wilson AF, VanderLaan EF.</strong> Plasma prolactin and growth hormone during meditation. <em>Psychosomatic Medicine</em> 1978 40(4):329-333
+                                </li>
+                                <li>
+                                    <strong>Bennett, J.E. and Trinder, J.</strong> Hemispheric laterality and cognitive style associated with Transcendental Meditation. <em>Psychophysiology</em> 14: 293–296, 1977.
+                                </li>
+                                <li>
+                                    <strong>Hebert, R. and D. Lehmann.</strong> Theta Bursts: An EEG Pattern in Normal Subjects Practising the Transcendental Meditation Technique. <em>Electroencephalography and Clinical Neurophysiology</em> 42(3): 397-405, 1977.
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <p class="section-note">Vragen over specifieke aandoeningen of sectoren? Laat het ons weten, dan selecteren we passende papers voor uw team.</p>
+                    <div class="research-links">
+                        <h3>Additional Useful Links & Resources</h3>
+                        <p class="section-note">Extra video's en technische achtergrondinformatie die niet in de bovenstaande onderzoekssecties staan.</p>
+                        
+                        <div class="prominent-link-card">
+                            <h4>⭐ Featured Video</h4>
+                            <a href="https://www.youtube.com/watch?v=jdLaftxqbks" target="_blank" rel="noopener noreferrer" class="prominent-link">
+                                Watch Featured Video
+                            </a>
+                        </div>
+
+                        <h4>Additional Videos</h4>
+                        <ul class="links-list">
+                            <li>
+                                <strong>More Technical Details</strong><br>
+                                <a href="https://www.youtube.com/watch?v=FmOWdsyYw30" target="_blank" rel="noopener noreferrer">
+                                    YouTube: technical background on EEG systems
+                                </a>
+                            </li>
+                        </ul>
+
+                        <p class="section-note">Questions about specific conditions or sectors? Let us know, and we'll select appropriate papers for your team.</p>
+                    </div>
                 </div>
             </section>
 
